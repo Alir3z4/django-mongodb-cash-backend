@@ -1,6 +1,7 @@
 1.0.1 2014-02-25
 ================
-- - -
+----
+
 * Fix #1: Remove safe parameter due to PyMongo deprecation warning.
 
 
