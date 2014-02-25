@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-# Author Karol Sikora <karol.sikora@laboratorium.ee>, (c) 2012
+# Author:
+#  Karol Sikora <karol.sikora@laboratorium.ee>, (c) 2012
+#  Alireza Savand <alireza.savand@gmail.com>, (c) 2013, 2014
 
 try:
     import cPickle as pickle
