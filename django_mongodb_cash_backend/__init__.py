@@ -65,12 +65,10 @@ class MongoDBCache(BaseCache):
                 coll.update(
                     {'_id': data['_id']},
                     {'$set': {'data': encoded, 'expires': expires}},
-                    safe=True
                 )
             else:
                 coll.insert(
                     {'key': key, 'data': encoded, 'expires': expires},
-                    safe=True
                 )
         #TODO: check threadsafety
         except (OperationFailure, TimeoutError):
