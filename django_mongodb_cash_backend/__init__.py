@@ -158,7 +158,7 @@ class MongoDBCache(BaseCache):
     def _initialize_collection(self):
         # monkey.patch_socket()
         if self._username is not None:
-            self.connection = pymongo.MongoClient('mongodb://{0}:{1}@{2}:{3}'.format(self._username, self._password, self._host, self._port))
+            self.connection = pymongo.MongoClient('mongodb://{0}:{1}@{2}:{3}/{4}'.format(self._username, self._password, self._host, self._port, self._collection))
         else:
             self.connection = pymongo.MongoClient('mongodb://{0}:{1}/'.format(self._host, self._port))
         self._db = self.connection[self._database]
