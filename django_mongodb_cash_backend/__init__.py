@@ -22,6 +22,8 @@ class MongoDBCache(BaseCache):
         options = params.get('OPTIONS', {})
         self._host = options.get('HOST', 'localhost')
         self._port = options.get('PORT', 27017)
+        self._username = options.get('USERNAME')
+        self._password = options.get('PASSWORD')
         self._database = options.get('DATABASE', 'django_cache')
         self._collection = location
 
@@ -145,7 +147,7 @@ class MongoDBCache(BaseCache):
             return
         coll = self._get_collection()
         coll.remove({'expires': {'$lte': datetime.utcnow()}})
-        #TODO: implement more agressive cull
+        # TODO: implement more agressive cull
 
     def _get_collection(self):
         if not getattr(self, '_coll', None):
@@ -154,7 +156,10 @@ class MongoDBCache(BaseCache):
         return self._coll
 
     def _initialize_collection(self):
-        #monkey.patch_socket()
-        self.connection = pymongo.MongoClient(self._host, self._port)
+        # monkey.patch_socket()
+        if self._username is not None:
+            self.connection = pymongo.MongoClient('mongodb://{0}:{1}@{2}:{3}'.format(self._username, self._password, self._host, self._port))
+        else:
+            self.connection = pymongo.MongoClient('mongodb://{0}:{1}/'.format(self._host, self._port))
         self._db = self.connection[self._database]
         self._coll = self._db[self._collection]
