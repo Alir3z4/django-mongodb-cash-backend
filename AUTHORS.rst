@@ -8,7 +8,7 @@ The PRIMARY AUTHORS are (and/or have been):
 
 And here is an inevitably incomplete list of MUCH-APPRECIATED CONTRIBUTORS --
 people who have submitted patches, reported bugs, added translations, helped
-answer newbie questions, and generally made ``python-stop-words`` that much better:
+answer newbie questions, and generally made ``django-mongodb-cash-backend`` that much better:
 
 * Alireza Savand <alireza.savand@gmail.com>
 * Mike Staszel <crimsonredmk@gmail.com>
