@@ -1,9 +1,9 @@
-1.1 2014-06-04
+2014.6.14 2014-06-14
 ================
 ----
 
 * Authenticated connection support.
-
+* Change version number conversion.
 
 
 1.0.1 2014-02-25
