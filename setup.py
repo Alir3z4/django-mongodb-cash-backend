@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='django-mongodb-cash-backend',
-    version='1.0.1',
+    version='2014.6.14',
     packages=['django_mongodb_cash_backend'],
     package_dir={'django_mongodb_cash_backend': 'django_mongodb_cash_backend'},
     provides=['django_mongodb_cash_backend'],
