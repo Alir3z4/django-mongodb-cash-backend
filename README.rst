@@ -11,19 +11,19 @@ Install with:
 
 Add the following to your Django settings::
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django_mongodb_cash_backend.MongoDBCache',
-        "LOCATION": "DEFAULT",
-        "TIMEOUT": 86400,
-        "OPTIONS": {
-            "HOST": "MongoDB_host",
-            "PORT": 12345,
-            "USERNAME": "username_if_desired",
-            "PASSWORD": "password_if_needed"
-        },
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_mongodb_cash_backend.MongoDBCache',
+            "LOCATION": "DEFAULT",
+            "TIMEOUT": 86400,
+            "OPTIONS": {
+                "HOST": "MongoDB_host",
+                "PORT": 12345,
+                "USERNAME": "username_if_desired",
+                "PASSWORD": "password_if_needed"
+            },
+        }
     }
-}
 
 Tips
 ----
