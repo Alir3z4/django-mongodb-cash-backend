@@ -1,5 +1,13 @@
-2014.6.14 2014-06-14
-================
+2015.11.9
+=========
+----
+
+* Update to latest ``PyMongo`` version.
+* Fix ``no module named TimeoutError``.
+
+
+2014.6.14
+=========
 ----
 
 * Authenticated connection support.
