@@ -1,6 +1,3 @@
-> Forked from: https://github.com/Alir3z4/django-mongodb-cash-backend
-
-
 Django MongoDB Cash Backend
 ===========================
 
@@ -12,7 +9,7 @@ Install with:
 
 ``pip install django-mongodb-cash-backend``
 
-Add the following to your Django settings:
+Add the following to your Django settings::
 
     CACHES = {
         'default': {
@@ -27,3 +24,9 @@ Add the following to your Django settings:
             },
         }
     }
+
+Tips
+----
+On your MongoDB database, you should consider creating an index
+on the "expires" field. Culling old cache entries will be much
+faster and performance overall will be improved.
