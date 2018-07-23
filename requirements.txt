@@ -1,2 +1,2 @@
-Django>=1.5.3
-pymongo==3.1
+Django~=1.11.13
+pymongo~=3.6.1
