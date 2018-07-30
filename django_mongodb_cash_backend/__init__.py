@@ -102,7 +102,6 @@ class MongoDBCache(BaseCache):
 
     @reconnect()
     def _base_set(self, mode, key, value, timeout=DEFAULT_TIMEOUT):
-        print self, mode, key, value, timeout
         if timeout is DEFAULT_TIMEOUT:
             timeout = self.default_timeout
 
