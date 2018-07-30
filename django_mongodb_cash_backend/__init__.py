@@ -94,7 +94,7 @@ class MongoDBCache(BaseCache):
 
         return self._base_set('add', key, value, timeout)
 
-    def set(self, key, value, timeout=None, version=None):
+    def set(self, key, value, timeout=DEFAULT_TIMEOUT, version=None):
         key = self.make_key(key, version)
         self.validate_key(key)
 
@@ -102,6 +102,7 @@ class MongoDBCache(BaseCache):
 
     @reconnect()
     def _base_set(self, mode, key, value, timeout=DEFAULT_TIMEOUT):
+        print self, mode, key, value, timeout
         if timeout is DEFAULT_TIMEOUT:
             timeout = self.default_timeout
 
