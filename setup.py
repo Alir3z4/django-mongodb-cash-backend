@@ -1,8 +1,8 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='django-mongodb-cash-backend',
-    version='2015.11.9',
+    version='2018.7.23',
     packages=['django_mongodb_cash_backend'],
     package_dir={'django_mongodb_cash_backend': 'django_mongodb_cash_backend'},
     provides=['django_mongodb_cash_backend'],
@@ -16,8 +16,8 @@ setup(
     description='The only Django MongoDB Cache backend you need.',
     long_description=open('README.rst').read(),
     install_requires=[
-        'Django >= 1.5.3',
-        'pymongo >= 3.1'
+        'Django~=1.11.13',
+        'pymongo~=3.6.1'
     ],
     keywords=[
         'django',
